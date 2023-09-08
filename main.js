@@ -1,4 +1,4 @@
-let timer;
+let timer ;
 let elapsedTime = 0;
 
 function updateDisplay() {
@@ -35,18 +35,26 @@ $(document).ready(function () {
       $('#reset').prop('disabled', false);
     };
   });
+
   $('#reset').on('click', function () {
     if (!timer) {
       elapsedTime = 0;
       updateDisplay();
+
+      $('#start').prop('disabled', false);
+      $('#stop').prop('disabled', true);
       $('#reset').prop('disabled', true);
     };
 
     if (timer) {
+      clearInterval(timer);
+      timer = null;
       elapsedTime = 0;
       updateDisplay();
-      $('#reset').prop('disabled', false);
 
+      $('#start').prop('disabled', false);
+      $('#stop').prop('disabled', true);
+      $('#reset').prop('disabled', true);
     };
   });
 });
