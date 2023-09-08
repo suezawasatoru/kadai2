@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+#container {
+  font-size: 32px;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+#conteiner p{
+  display: inline-block;
+}
+
+#button_conteiner {
+  display: block;
+}
+
+#start {
+  padding: 8px;
+  font-weight: 700;
+}
+
+#stop {
+  padding: 8px;
+  font-weight: 700;
+}
+
+#reset {
+  padding: 8px;
+  font-weight: 700;
+}
